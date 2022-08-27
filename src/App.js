@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./Header.js";
 import Home from "./Home.js";
 import Login from "./Login.js";
+import Order from "./Order.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./Checkout.js";
 import { Fragment, useEffect } from "react";
@@ -36,6 +37,15 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route
+            path="/order"
+            element={
+              <Fragment>
+                <Header></Header>
+                <Order />
+              </Fragment>
+            }
+          ></Route>
           <Route path="/login" element={<Login />}></Route>
 
           <Route
